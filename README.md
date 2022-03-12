@@ -32,7 +32,7 @@ The rendered graph should have similarity in appearance to the mockup below:
 
 ### Graph of a 2d Plot
 
-![Graph of a 2d Plot](./mockup/stim.jpg)
+![Graph of a 2d Plot](./Assets/mockup/stim.jpg)
 
 ## Usage
 
