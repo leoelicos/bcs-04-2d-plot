@@ -10,30 +10,36 @@
 		<title>2D Plot</title>
 	</head>
 	<body>
-		<header>2D Plot</header>
+		<header><h3>2D Plot</h3></header>
 		<main>
-			<!-- canvas -->
-			<section class="canvas"></section>
-			<!-- polynomial parameters -->
-			<article class="parameter">
-				<h1 class="input-header">Polynomial</h1>
-				<p class="input-detail">Adjust polynomial coefficients and constant</p>
-				<section class="parameter-input">
-					<form class="adjust">
-						<input type="number" name="a" id="a" />
-						<input type="number" name="b" id="b" />
+			<section class="wrapper-canvas">
+				<div class="canvas" id="canvas"></div>
+			</section>
+			<section class="wrapper-formula">
+				<h3 class="formula">y =&nbsp;<span id="formula-a">a</span>x +&nbsp;<span id="formula-b">b</span></h3>
+			</section>
+			<section class="wrapper-parameter">
+				<article class="parameter">
+					<div class="coefficient"><label for="a">a</label><input type="number" id="a" value="1" /></div>
+					<div class="coefficient"><label for="a">b</label><input type="number" id="b" value="1" /></div>
+				</article>
+			</section>
+			<section class="wrapper-parameter">
+				<article class="parameter">
+					<form class="parameter-input">
+						<div class="nowrap">
+							<div class="coefficient"><label for="x1">x1</label><input type="number" id="x1" value="1" /></div>
+							<div class="coefficient"><label for="x2">x2</label><input type="number" id="x2" value="1" /></div>
+						</div>
+						<div class="nowrap">
+							<div class="coefficient"><label for="y1">y1</label><input type="number" id="y1" value="1" /></div>
+							<div class="coefficient"><label for="y2">y2</label><input type="number" id="y2" value="1" /></div>
+						</div>
 					</form>
-					<div class="preview">ax^2 + b</div>
-				</section>
-			</article>
-			<!-- interval parameters -->
-			<article class="parameter">
-				<h1 class="input-header">Interval</h1>
-				<p class="input-detail">Adjust where the graph starts and ends</p>
-				<section class="parameter-input"></section>
-			</article>
+				</article>
+			</section>
 		</main>
-		<footer>Copyright</footer>
+		<footer><p>Copyright &copy; Leo Wong 2022</p></footer>
 		<script src="./Assets/JS/script.js"></script>
 	</body>
 </html>
