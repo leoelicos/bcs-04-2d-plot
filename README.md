@@ -1,5 +1,17 @@
 # 2D Plot
 
+## Introduction
+
+This was a personal challenge set by myself. I wanted to create an app that could draw simple lines.
+
+## Deployed App
+
+Go to [2d Plot](https://leoelicos.github.io/bcs-04-2d-plot) to play around with the 2d Plot
+
+## Screenshots
+
+![Screenshot of graph](./Assets/images/deployed.jpg)
+
 ## User Story
 
 ```
@@ -33,7 +45,3 @@ The rendered graph should have similarity in appearance to the mockup below:
 ### Graph of a 2d Plot
 
 ![Graph of a 2d Plot](./Assets/mockup/stim.jpg)
-
-## Usage
-
-Go to [2d Plot](https://leoelicos.github.io/bcs-04-2d-plot) to play around with the 2d Plot

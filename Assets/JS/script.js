@@ -7,6 +7,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 document.documentElement.style.setProperty('--vw', `${vw}px`);
 
 const canvas = document.getElementById('canvas');
+
 window.onresize = function () {
 	canvas.style.width = '100%';
 	canvas.height = '100%';
@@ -39,22 +40,49 @@ function getValues() {
 }
 
 function drawLine(fromX, fromY, toX, toY) {
-	console.log(`Drawing from (${fromX},${fromY}) to (${toX},${toY})`);
+	var actualFromX = 1000 + fromX;
+	var actualFromY = 1000 - fromY;
+	var actualToX = 1000 + toX;
+	var actualToY = 1000 - toY;
+	console.log(`from (${fromX},${fromY}) to (${toX},${toY})  `);
+
 	ctx.beginPath();
-	ctx.moveTo(fromX, fromY);
-	ctx.lineTo(toX, toY);
+	ctx.moveTo(actualFromX, actualFromY);
+	ctx.lineTo(actualToX, actualToY);
 	ctx.strokeStyle = color;
 	ctx.lineWidth = size;
 	ctx.stroke();
 }
 
 var graphClick = document.getElementById('graphClick').addEventListener('click', () => {
-	generateGraph();
+	a = document.getElementById('a').value;
+	b = document.getElementById('b').value;
+	console.log(`a = ${a}, b = ${b}`);
+	generateGraph(a, b);
 });
 
-function generateGraph() {
-	// draw x-axis
-	drawLine(0, canvasHeight / 2, canvasWidth, canvasHeight / 2);
-	// draw y-axis
-	drawLine(0, canvasHeight / 2, canvasWidth, canvasHeight / 2);
+function generateGraph(a, b) {
+	var i;
+	for (i = -1000; i < 1000; i++) {
+		drawLine(i, line(a, i, b), i + 1, line(a, i + 1, b));
+		console.log(`${i}, ${line(a, i, b)}, ${i + 1}, ${line(a, i + 1, b)}`);
+	}
 }
+
+// line
+function line(a, x, b) {
+	return parseInt(a) * x + parseInt(b);
+}
+
+function drawAxes() {
+	// draw x-axis
+	drawLine(-1000, 0, 1000, 0);
+	// draw y-axis
+	drawLine(0, 1000, 0, -1000);
+}
+
+function init() {
+	drawAxes();
+}
+
+init();
