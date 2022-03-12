@@ -8,8 +8,7 @@
 	margin: 0;
 	/* text */
 	font-family: 'Roboto', sans-serif;
-	font-size: 16px; /* fallback for older browsers */
-	font-size: 2vmax; /* scale for different screens */
+	font-size: calc(12px + 1vmin);
 }
 
 /* semantic */
@@ -99,7 +98,7 @@ footer p {
 
 .wrapper-formula {
 	width: 100%;
-	flex: 0;
+
 	display: flex;
 	align-items: center;
 	margin-top: 2vmin;
@@ -121,7 +120,7 @@ footer p {
 
 .wrapper-parameter {
 	width: 100%;
-	flex: 1;
+
 	display: flex;
 	align-items: center;
 	margin-top: 2vmin;
